@@ -1,12 +1,13 @@
-import React from "react";
 import "./Main.scss";
-import Jumbotron from "./jumbotron/Jumbotron";
-import About from "./about/About";
-import Resume from "./resume/Resume";
-import Services from "./services/Services";
-import Portfolio from "./portfolio/Portfolio";
-import Pricing from "./pricing/Pricing";
-import Contact from "./contact/Contact";
+import loadable from "@loadable/component";
+
+const Jumbotron = loadable(() => import("./jumbotron/Jumbotron"));
+const About = loadable(() => import("./about/About"));
+const Resume = loadable(() => import("./resume/Resume"));
+const Services = loadable(() => import("./services/Services"));
+const Portfolio = loadable(() => import("./portfolio/Portfolio"));
+const Pricing = loadable(() => import("./pricing/Pricing"));
+const Contact = loadable(() => import("./contact/Contact"));
 
 export default function Main() {
   return (

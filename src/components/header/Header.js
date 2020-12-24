@@ -1,4 +1,3 @@
-import React from "react";
 import "./Header.scss";
 
 function toggle_nav() {

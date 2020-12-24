@@ -1,6 +1,6 @@
-import React from "react";
 import "./Jumbotron.scss";
 import img from "../../../assets/profile-pic.webp";
+
 export default function Jumbotron() {
   return (
     <section id="jumbotron" className="section">

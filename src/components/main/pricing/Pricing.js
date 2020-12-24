@@ -1,4 +1,3 @@
-import React from "react";
 import "./Pricing.scss";
 
 export default function Pricing() {

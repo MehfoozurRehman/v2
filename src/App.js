@@ -1,7 +1,8 @@
 import "./App.scss";
-import Header from "./components/header/Header";
-import Main from "./components/main/Main";
-import Footer from "./components/footer/Footer";
+import loadable from "@loadable/component";
+const Header = loadable(() => import("./components/header/Header"));
+const Main = loadable(() => import("./components/main/Main"));
+const Footer = loadable(() => import("./components/footer/Footer"));
 
 function App() {
   return (
