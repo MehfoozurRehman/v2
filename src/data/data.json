@@ -1,0 +1,47 @@
+{
+  "HeaderData": [
+    {
+      "name": "Mehfooz-ur-Rehman"
+    }
+  ],
+  "JumbotronData": [
+    {
+      "heading": "Expand your buisness",
+      "sub_heading": "Expand your buisness",
+      "slogan": "Web Developer, Freelancer & Web/ Mobile UI/UX Designer"
+    }
+  ],
+  "AboutData": [
+    {
+      "who_you_are": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, nostrum sapiente, obcaecati omnis facilis quae minus, quas assumenda beatae repellat nobis pariatur? Voluptate dolore commodi neque minima accusantium quibusdam nam at tempore exercitationem dicta rerum, alias ut porro dignissimos ducimus est iusto libero ullam ab! Ut temporibus explicabo deleniti. Qui.",
+      "skills": {
+        "skill1": "UI/UX design",
+        "skill2": "HTML,CSS,JAVAScript",
+        "skill3": "Sass,Bootstrap",
+        "skill4": "C++",
+        "skill5": "Adobe XD,Adobe Photoshop,Adobe Illustrator",
+        "skill6": "Figma,Sketch"
+      }
+    }
+  ],
+  "ServicesData": [
+    {
+      "services_headings": {
+        "heading1": "Web design",
+        "heading2": "Interface design",
+        "heading3": "Web development",
+        "heading4": "UX design",
+        "heading5": "Motion graphic",
+        "heading6": "SEO optimize"
+      },
+      "services_details": {
+        "detail1": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, aut! Perspiciatis perferendis cum nisi quos repellendus ab maiores adipisci at.",
+        "detail2": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, aut! Perspiciatis perferendis cum nisi quos repellendus ab maiores adipisci at.",
+        "detail3": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, aut! Perspiciatis perferendis cum nisi quos repellendus ab maiores adipisci at.",
+        "detail4": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, aut! Perspiciatis perferendis cum nisi quos repellendus ab maiores adipisci at.",
+        "detail5": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, aut! Perspiciatis perferendis cum nisi quos repellendus ab maiores adipisci at.",
+        "detail6": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, aut! Perspiciatis perferendis cum nisi quos repellendus ab maiores adipisci at."
+      }
+    }
+  ]
+}

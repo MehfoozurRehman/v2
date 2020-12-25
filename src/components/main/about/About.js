@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.scss";
 import img from "../../../assets/about-pic.webp";
+import data from "../../../data/data.json";
 
 export default function About() {
   return (
@@ -17,23 +18,29 @@ export default function About() {
           <img src={img} alt="about-pic" className="about-pic" />
           <div className="about">
             <div className="about-heading">Who am I?</div>
-            <p className="about-info">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-              nostrum sapiente, obcaecati omnis facilis quae minus, quas
-              assumenda beatae repellat nobis pariatur? Voluptate dolore commodi
-              neque minima accusantium quibusdam nam at tempore exercitationem
-              dicta rerum, alias ut porro dignissimos ducimus est iusto libero
-              ullam ab! Ut temporibus explicabo deleniti. Qui.
-            </p>
+            {data.AboutData.map((aboutData) => {
+              return <p className="about-info">{aboutData.who_you_are}</p>;
+            })}
             <div className="skill-set-heading">Here are my skills:</div>
             <ul className="skill-set">
-              <li className="skill">UI/UX design</li>
-              <li className="skill">HTML,CSS,JAVAScript</li>
-              <li className="skill">Sass,Bootstrap</li>
-              <li className="skill">C++</li>
-              <li className="skill">
-                Adobe XD,Adobe Photoshop,Adobe Illustrator
-              </li>
+              {data.AboutData.map((aboutData) => {
+                return <li className="skill">{aboutData.skills.skill1}</li>;
+              })}
+              {data.AboutData.map((aboutData) => {
+                return <li className="skill">{aboutData.skills.skill2}</li>;
+              })}
+              {data.AboutData.map((aboutData) => {
+                return <li className="skill">{aboutData.skills.skill3}</li>;
+              })}
+              {data.AboutData.map((aboutData) => {
+                return <li className="skill">{aboutData.skills.skill4}</li>;
+              })}
+              {data.AboutData.map((aboutData) => {
+                return <li className="skill">{aboutData.skills.skill5}</li>;
+              })}
+              {data.AboutData.map((aboutData) => {
+                return <li className="skill">{aboutData.skills.skill6}</li>;
+              })}
             </ul>
           </div>
         </div>

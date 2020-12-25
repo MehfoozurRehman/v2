@@ -1,5 +1,6 @@
 import React from "react";
 import "./Services.scss";
+import data from "../../../data/data.json";
 
 export default function Services() {
   return (
@@ -25,12 +26,20 @@ export default function Services() {
                 transform="translate(-599.992 -2534.013)"
               />
             </svg>
-            <div className="card-heading">Web Design</div>
-            <div className="card-info">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-              aut! Perspiciatis perferendis cum nisi quos repellendus ab maiores
-              adipisci at.
-            </div>
+            {data.ServicesData.map((servicesData) => {
+              return (
+                <div className="card-heading">
+                  {servicesData.services_headings.heading1}
+                </div>
+              );
+            })}
+            {data.ServicesData.map((servicesData) => {
+              return (
+                <div className="card-info">
+                  {servicesData.services_details.detail1}
+                </div>
+              );
+            })}
           </div>
           <div className="services-card card-2">
             <svg
@@ -44,12 +53,20 @@ export default function Services() {
                 transform="translate(-997.988 -2533.999)"
               />
             </svg>
-            <div className="card-heading">Interface Design</div>
-            <div className="card-info">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-              aut! Perspiciatis perferendis cum nisi quos repellendus ab maiores
-              adipisci at.
-            </div>
+            {data.ServicesData.map((servicesData) => {
+              return (
+                <div className="card-heading">
+                  {servicesData.services_headings.heading2}
+                </div>
+              );
+            })}
+            {data.ServicesData.map((servicesData) => {
+              return (
+                <div className="card-info">
+                  {servicesData.services_details.detail2}
+                </div>
+              );
+            })}
           </div>
           <div className="services-card card-3">
             <svg
@@ -63,12 +80,20 @@ export default function Services() {
                 transform="translate(-1395.001 -2533.999)"
               />
             </svg>
-            <div className="card-heading">Web Development</div>
-            <div className="card-info">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-              aut! Perspiciatis perferendis cum nisi quos repellendus ab maiores
-              adipisci at.
-            </div>
+            {data.ServicesData.map((servicesData) => {
+              return (
+                <div className="card-heading">
+                  {servicesData.services_headings.heading3}
+                </div>
+              );
+            })}
+            {data.ServicesData.map((servicesData) => {
+              return (
+                <div className="card-info">
+                  {servicesData.services_details.detail3}
+                </div>
+              );
+            })}
           </div>
         </div>
         <div className="services-row">
@@ -84,12 +109,20 @@ export default function Services() {
                 transform="translate(-588.011 -2934.009)"
               />
             </svg>
-            <div className="card-heading">UX Design</div>
-            <div className="card-info">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-              aut! Perspiciatis perferendis cum nisi quos repellendus ab maiores
-              adipisci at.
-            </div>
+            {data.ServicesData.map((servicesData) => {
+              return (
+                <div className="card-heading">
+                  {servicesData.services_headings.heading4}
+                </div>
+              );
+            })}
+            {data.ServicesData.map((servicesData) => {
+              return (
+                <div className="card-info">
+                  {servicesData.services_details.detail4}
+                </div>
+              );
+            })}
           </div>
           <div className="services-card card-5">
             <svg
@@ -103,12 +136,20 @@ export default function Services() {
                 transform="translate(-994.005 -2934.005)"
               />
             </svg>
-            <div className="card-heading">Motion Graphic</div>
-            <div className="card-info">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-              aut! Perspiciatis perferendis cum nisi quos repellendus ab maiores
-              adipisci at.
-            </div>
+            {data.ServicesData.map((servicesData) => {
+              return (
+                <div className="card-heading">
+                  {servicesData.services_headings.heading5}
+                </div>
+              );
+            })}
+            {data.ServicesData.map((servicesData) => {
+              return (
+                <div className="card-info">
+                  {servicesData.services_details.detail5}
+                </div>
+              );
+            })}
           </div>
           <div className="services-card card-6">
             <svg
@@ -122,12 +163,20 @@ export default function Services() {
                 transform="translate(-1402 -2933.999)"
               />
             </svg>
-            <div className="card-heading">SEO Optimize</div>
-            <div className="card-info">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-              aut! Perspiciatis perferendis cum nisi quos repellendus ab maiores
-              adipisci at.
-            </div>
+            {data.ServicesData.map((servicesData) => {
+              return (
+                <div className="card-heading">
+                  {servicesData.services_headings.heading6}
+                </div>
+              );
+            })}
+            {data.ServicesData.map((servicesData) => {
+              return (
+                <div className="card-info">
+                  {servicesData.services_details.detail6}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

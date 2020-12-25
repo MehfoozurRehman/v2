@@ -35,6 +35,7 @@ input[type="checkbox"] {
   float: right;
   border-radius: 100px;
   position: relative;
+  user-select: none;
 }
 
 .label:after {
@@ -46,7 +47,8 @@ input[type="checkbox"] {
   height: 17px;
   background: var(--bg-color);
   border-radius: 90px;
-  transition: 0.3s;
+  transition: 1000ms;
+  user-select: none;
 }
 
 input:checked + .label {
@@ -66,7 +68,7 @@ html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-  transition: all 750ms !important;
+  transition: all 250ms !important;
   transition-delay: 0 !important;
 }
 .brand-name {

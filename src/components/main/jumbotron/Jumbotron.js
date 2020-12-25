@@ -1,28 +1,37 @@
 import React from "react";
 import "./Jumbotron.scss";
-import img from "../../../assets/profile-pic.webp";
+import image from "../../../assets/profile-pic.webp";
+import data from "../../../data/data.json";
 
-export default function Jumbotron() {
-  return (
-    <section id="jumbotron" className="section">
-      <div className="col-half">
-        <div className="about_me">Start a digital life</div>
-        <div className="slogan">Expand Your Buisness</div>
-        <div className="info">
-          Web Developer, Freelancer & Web/ Mobile UI/UX Designer
+class Jumbotron extends React.Component {
+  render() {
+    return (
+      <div id="jumbotron" className="section">
+        <div className="col-half">
+          {data.JumbotronData.map((jumbotronData) => {
+            return <div className="about_me">{jumbotronData.heading}</div>;
+          })}
+          {data.JumbotronData.map((jumbotronData) => {
+            return <div className="slogan">{jumbotronData.sub_heading}</div>;
+          })}
+          {data.JumbotronData.map((jumbotronData) => {
+            return <div className="info">{jumbotronData.slogan}</div>;
+          })}
+          <div className="cta">
+            <a href="#portfolio" className="primary-cta">
+              My Work
+            </a>
+            <a href="#contact" className="secondary-cta">
+              Contact
+            </a>
+          </div>
         </div>
-        <div className="cta">
-          <a href="#portfolio" className="primary-cta">
-            My Work
-          </a>
-          <a href="#contact" className="secondary-cta">
-            Contact
-          </a>
+        <div className="col-half">
+          <img src={image} className="jumbotron-pic" alt="profile-pic" />
         </div>
       </div>
-      <div className="col-half">
-        <img src={img} className="jumbotron-pic" alt="profile-pic" />
-      </div>
-    </section>
-  );
+    );
+  }
 }
+
+export default Jumbotron;
