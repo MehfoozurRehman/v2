@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.scss";
 import loadable from "@loadable/component";
 const Header = loadable(() => import("./components/header/Header"));

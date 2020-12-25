@@ -1,3 +1,4 @@
+import React from "react";
 import "./Portfolio.scss";
 import img_project_1 from "../../../assets/project-pic/to-do-list.webp";
 import img_project_2 from "../../../assets/project-pic/codepen.webp";

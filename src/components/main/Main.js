@@ -1,3 +1,4 @@
+import React from "react";
 import "./Main.scss";
 import loadable from "@loadable/component";
 
