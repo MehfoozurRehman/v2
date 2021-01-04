@@ -2,40 +2,40 @@ import React from "react";
 import "./Header.scss";
 import data from "../../data/data.json";
 
-function toggle_nav() {
-  const menuBtn = document.querySelector(".menu-btn");
-  const mobileNav = document.querySelector(".mobile-nav");
-  if (mobileNav.style.display === "none") {
-    document.querySelector(".mobile-nav").style.display = "flex";
-    menuBtn.classList.add("open");
-  } else {
-    document.querySelector(".mobile-nav").style.display = "none";
-    menuBtn.classList.remove("open");
-  }
-}
-
-function toggle_theme() {
-  var checkbox = document.querySelector("input[name=theme]");
-
-  checkbox.addEventListener("change", function () {
-    if (this.checked) {
-      trans();
-      document.documentElement.setAttribute("data-theme", "dark");
-    } else {
-      trans();
-      document.documentElement.setAttribute("data-theme", "light");
-    }
-  });
-
-  let trans = () => {
-    document.documentElement.classList.add("transition");
-    window.setTimeout(() => {
-      document.documentElement.classList.remove("transition");
-    }, 1000);
-  };
-}
-
 class Header extends React.Component {
+  toggle_nav() {
+    const menuBtn = document.querySelector(".menu-btn");
+    const mobileNav = document.querySelector(".mobile-nav");
+    if (mobileNav.style.display === "none") {
+      document.querySelector(".mobile-nav").style.display = "flex";
+      menuBtn.classList.add("open");
+    } else {
+      document.querySelector(".mobile-nav").style.display = "none";
+      menuBtn.classList.remove("open");
+    }
+  }
+
+  toggle_theme() {
+    var checkbox = document.querySelector("input[name=theme]");
+
+    checkbox.addEventListener("change", function () {
+      if (this.checked) {
+        trans();
+        document.documentElement.setAttribute("data-theme", "dark");
+      } else {
+        trans();
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    });
+
+    let trans = () => {
+      document.documentElement.classList.add("transition");
+      window.setTimeout(() => {
+        document.documentElement.classList.remove("transition");
+      }, 1000);
+    };
+  }
+
   render() {
     return (
       <header className="header">
@@ -47,7 +47,7 @@ class Header extends React.Component {
               </a>
             );
           })}
-          <div className="menu-btn" onClick={toggle_nav}>
+          <div className="menu-btn" onClick={this.toggle_nav}>
             <div className="menu-btn__burger"></div>
           </div>
           <div className="desktop-nav">
@@ -77,7 +77,7 @@ class Header extends React.Component {
                 type="checkbox"
                 id="switch"
                 name="theme"
-                onClick={toggle_theme}
+                onClick={this.toggle_theme}
               />
               <label className="label" htmlFor="switch">
                 Toggle

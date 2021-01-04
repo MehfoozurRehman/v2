@@ -1,13 +1,13 @@
 html {
   --bg: #161d26;
   --bg-color: #1f2935;
-  --color: #95a5c6;
-  --white: #ffffff;
+  --color: #a5afc4;
+  --white: #eee;
 }
 
 html[data-theme="dark"] {
   --bg: #f5f5f5;
-  --bg-color: #ffffff;
+  --bg-color: #eee;
   --color: #1f2935;
   --white: #161d26;
   .image {

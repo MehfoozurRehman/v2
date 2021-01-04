@@ -1,4 +1,3 @@
-import React from "react";
 import "./About.scss";
 import img from "../../../assets/about-pic.webp";
 import data from "../../../data/data.json";
