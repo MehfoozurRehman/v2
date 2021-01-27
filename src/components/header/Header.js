@@ -66,9 +66,6 @@ class Header extends React.Component {
             <a href="#portfolio" className="nav-link">
               Portfolio
             </a>
-            <a href="#pricing" className="nav-link">
-              Pricing
-            </a>
             <a href="#contact" className="nav-link">
               Contact
             </a>
