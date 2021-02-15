@@ -49,7 +49,8 @@
   background-color: var(--bg-color);
 }
 .form-textarea {
-  height: 100px;
+  height: 100%;
+  max-height: 200px;
 }
 .form-cta {
   padding: 0.4em;
@@ -60,10 +61,10 @@
   color: var(--bg);
   cursor: pointer;
   transition: 100ms;
+  outline: none;
 }
-.form-cta:hover,
-:focus {
-  background-color: var(--color);
+.form-cta:hover {
+  background-color: darken($primary-color, 10%);
 }
 .back-to-top {
   position: absolute;
@@ -85,6 +86,14 @@
 }
 .back-to-top:hover {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+.alerts {
+  display: none;
+  padding: 1em;
+  font-size: 14px;
+  color: var(--bg-color);
+  text-align: center;
+  background-color: $primary-color;
 }
 @media (max-width: $xl-width) {
   .contact-content {
