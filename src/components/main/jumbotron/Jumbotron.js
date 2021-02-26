@@ -1,10 +1,10 @@
 import React from "react";
 import "./Jumbotron.scss";
 import image from "../../../assets/profile-pic.webp";
-import data from "../../../data/data.json";
 
 class Jumbotron extends React.Component {
   render() {
+    const data = this.props.data;
     return (
       <div id="jumbotron" className="section">
         <div className="col-half">

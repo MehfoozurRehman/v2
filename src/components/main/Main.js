@@ -1,5 +1,6 @@
 import "./Main.scss";
 import loadable from "@loadable/component";
+import data from "../../data/data.json";
 
 const Jumbotron = loadable(() => import("./jumbotron/Jumbotron"));
 const About = loadable(() => import("./about/About"));
@@ -11,14 +12,12 @@ const Contact = loadable(() => import("./contact/Contact"));
 export default function Main() {
   return (
     <main className="main">
-      <div className="sections">
-        <Jumbotron />
-        <About />
-        <Resume />
-        <Services />
-        <Portfolio />
-        <Contact />
-      </div>
+      <Jumbotron data={data} />
+      <About data={data} />
+      <Resume data={data} />
+      <Services data={data} />
+      <Portfolio data={data} />
+      <Contact />
     </main>
   );
 }

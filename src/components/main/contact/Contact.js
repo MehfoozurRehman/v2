@@ -23,12 +23,7 @@ function Contact() {
       );
   }
   function alertsOpenClose() {
-    document.querySelector(".alerts").style.display = "block";
-    document.querySelector(".alerts").innerHTML = "Send Successfully";
-    // setInterval(
-    //   (document.querySelector(".alerts").style.display = "none"),
-    //   100
-    // );
+    window.alert("Send Successfully");
   }
   return (
     <section id="contact" className="section">
@@ -39,7 +34,7 @@ function Contact() {
           <div className="bold-line"></div>
         </div>
       </div>
-      <div className="contact-content section-content">
+      <div className="contact-content">
         <iframe
           title="my office location"
           className="map"
@@ -79,8 +74,7 @@ function Contact() {
             id="message"
             autoComplete="none"
             name="message"
-          ></textarea>
-          <div className="alerts"></div>
+          />
           <input
             type="submit"
             className="form-cta"

@@ -2,36 +2,28 @@
 
 .main {
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sections {
-  width: $xl-width;
+  max-width: $xl-width;
   display: flex;
   flex-direction: column;
-  height: fit-content;
+  margin: 0em auto;
+  padding: 0.5em;
 }
 .section {
-  padding-top: 70px;
-  min-height: fit-content;
+  padding-top: 100px;
   height: 100vh;
-  max-height: 900px;
-  width: 100%;
+  max-height: 800px;
 }
 .section-header {
   width: 100%;
-  min-height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 1em;
 }
 .header-name {
   font-size: $heading-font-size;
   color: $primary-color;
   font-weight: bold;
+  margin-bottom: 0.5em;
 }
 .header-line {
   font-size: $normal-font-size;
@@ -44,6 +36,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1em;
 }
 .bold-line {
   width: 50%;
@@ -52,22 +45,23 @@
 }
 .section-content {
   width: 100%;
-  min-height: 80vh;
-  height: fit-content;
-  padding: 2em 0em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: $xl-width) {
-  .sections {
+  .main {
     max-width: $lg-width;
   }
 }
 @media (max-width: $lg-width) {
-  .sections {
+  .main {
     max-width: $md-width;
   }
 }
 @media (max-width: $md-width) {
-  .sections {
+  .main {
     max-width: $md-width;
     padding: 0em 0.5em;
   }

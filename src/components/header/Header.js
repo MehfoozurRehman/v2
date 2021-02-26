@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.scss";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import data from "../../data/data.json";
 
 class Header extends React.Component {
@@ -42,16 +43,16 @@ class Header extends React.Component {
         <nav className="nav">
           {data.HeaderData.map((headerData) => {
             return (
-              <a href="index.html" className="brand-name">
+              <Link to="/" className="brand-name">
                 {headerData.name}
-              </a>
+              </Link>
             );
           })}
           <div className="menu-btn" onClick={this.toggle_nav}>
             <div className="menu-btn__burger"></div>
           </div>
           <div className="desktop-nav">
-            <a href="index.html" className="nav-link">
+            <a href="#jumbotron" className="nav-link">
               Home
             </a>
             <a href="#about" className="nav-link">
@@ -83,7 +84,7 @@ class Header extends React.Component {
           </div>
         </nav>
         <div className="mobile-nav">
-          <a href="index.html" className="mobile-nav-link">
+          <a href="#jumbotron" className="mobile-nav-link">
             Home
           </a>
           <a href="#about" className="mobile-nav-link">

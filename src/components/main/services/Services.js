@@ -1,19 +1,19 @@
 import React from "react";
 import "./Services.scss";
-import data from "../../../data/data.json";
 
-export default function Services() {
-  return (
-    <section id="services" className="section">
-      <div className="section-header">
-        <div className="header-name">Services</div>
-        <div className="header-line">What We Provide You?</div>
-        <div className="line">
-          <div className="bold-line"></div>
+export default class Services extends React.Component {
+  render() {
+    const data = this.props.data;
+    return (
+      <section id="services" className="section">
+        <div className="section-header">
+          <div className="header-name">Services</div>
+          <div className="header-line">What We Provide You?</div>
+          <div className="line">
+            <div className="bold-line"></div>
+          </div>
         </div>
-      </div>
-      <div className="services-content section-content">
-        <div className="services-row">
+        <div className="services-content section-content">
           <div className="services-card card-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -95,8 +95,6 @@ export default function Services() {
               );
             })}
           </div>
-        </div>
-        <div className="services-row">
           <div className="services-card card-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -179,7 +177,7 @@ export default function Services() {
             })}
           </div>
         </div>
-      </div>
-    </section>
-  );
+      </section>
+    );
+  }
 }

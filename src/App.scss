@@ -44,7 +44,7 @@ body {
   background-color: var(--bg);
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 body::-webkit-scrollbar {
   background-color: var(--bg-color);
