@@ -3,6 +3,7 @@ html {
   --bg-color: #1f2935;
   --color: #a5afc4;
   --white: #eee;
+  scroll-behavior: smooth !important;
 }
 
 html[data-theme="dark"] {
