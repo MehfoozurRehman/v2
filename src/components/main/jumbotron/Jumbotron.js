@@ -1,8 +1,12 @@
 import React from "react";
 import "./Jumbotron.scss";
 import image from "../../../assets/profile-pic.webp";
+import { gsap } from "gsap";
 
 class Jumbotron extends React.Component {
+  componentDidMount() {
+    gsap.to("#user-pic", { duration: 2, x: 250, ease: "bounce" });
+  }
   render() {
     const data = this.props.data;
     return (
@@ -26,8 +30,13 @@ class Jumbotron extends React.Component {
             </a>
           </div>
         </div>
-        <div className="col-half">
-          <img src={image} className="jumbotron-pic" alt="profile-pic" />
+        <div className="col-half-pic">
+          <img
+            src={image}
+            id="user-pic"
+            className="jumbotron-pic"
+            alt="profile-pic"
+          />
         </div>
       </div>
     );

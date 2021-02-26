@@ -51,8 +51,13 @@
 .secondary-cta:hover {
   background-color: darken($secondary-color, 20%);
 }
+.col-half-pic {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
 .jumbotron-pic {
-  width: 398px;
+  width: 400px;
   height: 510px;
   transform: scale(0.9);
   border-radius: 1000px;
