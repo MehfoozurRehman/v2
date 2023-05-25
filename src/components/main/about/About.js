@@ -1,5 +1,6 @@
-import React from "react";
 import "./About.scss";
+
+import React from "react";
 import img from "../../../assets/about-pic.webp";
 
 export default class About extends React.Component {

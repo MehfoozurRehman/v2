@@ -1,5 +1,6 @@
-import React from "react";
 import "./Services.scss";
+
+import React from "react";
 
 export default class Services extends React.Component {
   render() {

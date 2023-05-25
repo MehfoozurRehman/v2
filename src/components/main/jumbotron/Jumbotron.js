@@ -1,12 +1,9 @@
-import React from "react";
 import "./Jumbotron.scss";
+
+import React from "react";
 import image from "../../../assets/profile-pic.webp";
-import { gsap } from "gsap";
 
 class Jumbotron extends React.Component {
-  componentDidMount() {
-    gsap.to("#user-pic", { duration: 2, x: 250, ease: "bounce" });
-  }
   render() {
     const data = this.props.data;
     return (
