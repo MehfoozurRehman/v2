@@ -1,5 +1,6 @@
 import "./Resume.scss";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 
 export default function Resume() {
   return (
@@ -34,25 +35,17 @@ export default function Resume() {
             <span className="entry">SEO Skills</span>
           </Link>
         </div>
-        <Switch>
-          <div className="resume-sections" id="resume_sections">
-            <Route path="/" exact>
-              <Eduction />
-            </Route>
-            <Route path="/work">
-              <Work />
-            </Route>
-            <Route path="/proskills">
-              <ProSkills />
-            </Route>
-            <Route path="/designskills">
-              <DesignSkills />
-            </Route>
-            <Route path="/seo">
-              <Seo />
-            </Route>
-          </div>
-        </Switch>
+        <BrowserRouter>
+          <Routes>
+            <div className="resume-sections" id="resume_sections">
+              <Route path="/" Component={Eduction} />
+              <Route path="/work" Component={Work} />
+              <Route path="/proskills" Component={ProSkills} />
+              <Route path="/designskills" Component={DesignSkills} />
+              <Route path="/seo" Component={Seo} />
+            </div>
+          </Routes>
+        </BrowserRouter>
       </div>
     </section>
   );
