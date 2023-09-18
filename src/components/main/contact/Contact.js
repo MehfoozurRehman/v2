@@ -11,7 +11,7 @@ function Contact() {
         "service_3dm7yud",
         "template_zkv8k6g",
         e.target,
-        "user_5E0L53uCeIn6J8FtgNgs8"
+        "user_5E0L53uCeIn6J8FtgNgs8",
       )
       .then(
         (result) => {
@@ -19,7 +19,7 @@ function Contact() {
         },
         (error) => {
           console.log(error.text);
-        }
+        },
       );
   }
   function alertsOpenClose() {
