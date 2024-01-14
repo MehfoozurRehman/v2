@@ -5,7 +5,6 @@ html {
   --white: #eee;
   scroll-behavior: smooth !important;
 }
-
 html[data-theme="dark"] {
   --bg: #f5f5f5;
   --bg-color: #eee;
@@ -15,7 +14,6 @@ html[data-theme="dark"] {
     filter: invert(0.5);
   }
 }
-
 $primary-color: #0abead;
 $secondary-color: #f57f17;
 $xl-width: 1260px;
@@ -24,7 +22,6 @@ $md-width: 960px;
 $sm-width: 560px;
 $heading-font-size: 26px;
 $normal-font-size: 16px;
-
 *,
 *::before,
 *::after {
@@ -72,7 +69,7 @@ body::-webkit-scrollbar-thumb:hover {
   position: fixed;
   top: 0;
   background-color: var(--bg-color);
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 .nav {
@@ -88,7 +85,6 @@ input[type="checkbox"] {
   width: 0;
   visibility: hidden;
 }
-
 .label {
   cursor: pointer;
   text-indent: -9999px;
@@ -100,7 +96,6 @@ input[type="checkbox"] {
   position: relative;
   user-select: none;
 }
-
 .label:after {
   content: "";
   position: absolute;
@@ -113,20 +108,16 @@ input[type="checkbox"] {
   transition: 1000ms;
   user-select: none;
 }
-
 input:checked + .label {
   background: $primary-color;
 }
-
 input:checked + .label:after {
   left: calc(100% - 5px);
   transform: translateX(-100%);
 }
-
 .label:active:after {
   width: 45px;
 }
-
 html.transition,
 html.transition *,
 html.transition *:before,
@@ -178,7 +169,6 @@ html.transition *:after {
 .menu-btn__burger::after {
   transform: translateY(10px);
 }
-/* ANIMATION */
 .menu-btn.open .menu-btn__burger {
   transform: translateX(-50px);
   background: transparent;
@@ -201,7 +191,7 @@ html.transition *:after {
   text-decoration: none;
   background-color: var(--bg-color);
   color: var(--color);
-  padding: 0px 1em;
+  padding: 0 1em;
   user-select: none;
 }
 .nav-link:hover {
@@ -212,7 +202,7 @@ html.transition *:after {
   flex-direction: column;
   width: 100vw;
   padding: 1em auto;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 .mobile-nav-link {
   display: flex;
@@ -241,7 +231,7 @@ html.transition *:after {
     max-width: $md-width;
   }
   .brand-name {
-    padding: 0px 0.5em;
+    padding: 0 0.5em;
   }
 }
 @media (max-width: $md-width) {
@@ -307,7 +297,7 @@ html.transition *:after {
 @media (max-width: $md-width) {
   .footer-wrapper {
     max-width: $md-width;
-    padding: 0em 1em;
+    padding: 0 1em;
   }
   .social-links {
     margin-left: 2em;
