@@ -1,9 +1,9 @@
-import React from "react";
 import "./Contact.scss";
+
 import emailjs from "emailjs-com";
 
-function Contact() {
-  function sendEmail(e) {
+export default function Contact() {
+  const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
@@ -11,7 +11,7 @@ function Contact() {
         "service_3dm7yud",
         "template_zkv8k6g",
         e.target,
-        "user_5E0L53uCeIn6J8FtgNgs8",
+        "user_5E0L53uCeIn6J8FtgNgs8"
       )
       .then(
         (result) => {
@@ -19,12 +19,12 @@ function Contact() {
         },
         (error) => {
           console.log(error.text);
-        },
+        }
       );
-  }
-  function alertsOpenClose() {
-    window.alert("Send Successfully");
-  }
+  };
+
+  const alertsOpenClose = () => window.alert("Send Successfully");
+
   return (
     <section id="contact" className="section">
       <div className="section-header">
@@ -102,5 +102,3 @@ function Contact() {
     </section>
   );
 }
-
-export default Contact;
