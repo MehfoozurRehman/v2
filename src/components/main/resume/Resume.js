@@ -1,8 +1,9 @@
 import "./Resume.scss";
 
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { useState } from "react";
 
 export default function Resume() {
+  const [selected, setSelected] = useState("education");
   return (
     <section id="resume" className="section">
       <div className="section-header">
@@ -14,38 +15,72 @@ export default function Resume() {
       </div>
       <div className="resume-content section-content">
         <div className="resume-sidebar">
-          <Link to="/" className="section-switch">
+          <a
+            className={
+              selected === "education"
+                ? "section-switch active"
+                : "section-switch"
+            }
+            onClick={() => setSelected("education")}
+          >
             <span className="switch-icon">i</span>
             <span className="entry">Education</span>
-          </Link>
-          <Link to="/work" className="section-switch">
+          </a>
+          <a
+            className={
+              selected === "work" ? "section-switch active" : "section-switch"
+            }
+            onClick={() => setSelected("work")}
+          >
             <span className="switch-icon">i</span>
             <span className="entry">Work History</span>
-          </Link>
-          <Link to="/proskills" className="section-switch">
+          </a>
+          <a
+            className={
+              selected === "proskills"
+                ? "section-switch active"
+                : "section-switch"
+            }
+            onClick={() => setSelected("proskills")}
+          >
             <span className="switch-icon">i</span>
             <span className="entry">Programming skills</span>
-          </Link>
-          <Link to="/designskills" className="section-switch">
+          </a>
+          <a
+            className={
+              selected === "designskills"
+                ? "section-switch active"
+                : "section-switch"
+            }
+            onClick={() => setSelected("designskills")}
+          >
             <span className="switch-icon">i</span>
             <span className="entry">Designer Skills</span>
-          </Link>
-          <Link to="/seo" className="section-switch">
+          </a>
+          <a
+            className={
+              selected === "seo" ? "section-switch active" : "section-switch"
+            }
+            onClick={() => setSelected("seo")}
+          >
             <span className="switch-icon">i</span>
             <span className="entry">SEO Skills</span>
-          </Link>
+          </a>
         </div>
-        <BrowserRouter>
-          <Routes>
-            <div className="resume-sections" id="resume_sections">
-              <Route path="/" Component={Eduction} />
-              <Route path="/work" Component={Work} />
-              <Route path="/proskills" Component={ProSkills} />
-              <Route path="/designskills" Component={DesignSkills} />
-              <Route path="/seo" Component={Seo} />
-            </div>
-          </Routes>
-        </BrowserRouter>
+
+        <div className="resume-sections" id="resume_sections">
+          {selected === "education" ? (
+            <Eduction />
+          ) : selected === "work" ? (
+            <Work />
+          ) : selected === "proskills" ? (
+            <ProSkills />
+          ) : selected === "designskills" ? (
+            <DesignSkills />
+          ) : selected === "seo" ? (
+            <Seo />
+          ) : null}
+        </div>
       </div>
     </section>
   );
@@ -94,6 +129,7 @@ function Eduction() {
     </section>
   );
 }
+
 function Work() {
   return (
     <section id="edu_section" className="resume-section">
@@ -137,6 +173,7 @@ function Work() {
     </section>
   );
 }
+
 function ProSkills() {
   return (
     <section id="edu_section" className="resume-section">
@@ -180,6 +217,7 @@ function ProSkills() {
     </section>
   );
 }
+
 function DesignSkills() {
   return (
     <section id="edu_section" className="resume-section">
@@ -223,6 +261,7 @@ function DesignSkills() {
     </section>
   );
 }
+
 function Seo() {
   return (
     <section id="edu_section" className="resume-section">
