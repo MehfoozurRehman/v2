@@ -1,12 +1,11 @@
 @import "../../../App.scss";
-
 #contact {
   position: relative;
 }
 .contact-content {
   display: flex;
   height: 80%;
-  padding: 2em 0em;
+  padding: 2em 0;
 }
 .map {
   width: 65%;
@@ -18,7 +17,7 @@
   width: 35%;
   height: 100%;
   background: var(--bg-color);
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -78,12 +77,12 @@
 }
 .back-to-top-svg {
   width: 25px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   border-radius: 50px;
   fill: white;
 }
 .back-to-top:hover {
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 .alerts {
   display: none;
