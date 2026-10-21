@@ -1,50 +1,42 @@
 # Developer Portfolio v2
 
-Personal developer portfolio website showcasing client projects, technical skills, and interactive contact forms built with React and EmailJS.
+Second version of a personal developer portfolio: a React single-page site with sections for an intro, services, projects, resume and a contact form that sends email through EmailJS.
 
-## Overview
+**Status:** Working demo. The page runs end to end and the contact form sends through EmailJS, but the repo has no tests, no live URL is recorded, and the project list comes from a local JSON file.
 
-`v2` is the second iteration of Mehfooz-ur-Rehman's personal developer portfolio, highlighting engineering experience, client case studies, responsive layout design, and EmailJS-powered direct message dispatch.
+## The problem
 
-## Tech Stack
+A developer needs a public page that shows what they do, lists client work and lets visitors send an inquiry without a back end. This version was a rebuild of the first portfolio in React.
 
-- **Frontend Framework**: React 18, React Router DOM v6
-- **Build Tooling**: Create React App (`react-scripts` v5)
-- **Styling**: SCSS / SASS
-- **Contact Service**: EmailJS (`emailjs-com`)
-- **Hosting**: Firebase Hosting (`firebase.json`)
+## What it does
 
-## Prerequisites
+- Hero section (`src/components/main/jumbotron/`) at the top of the page.
+- About and services sections describing the work offered (`about/`, `services/`).
+- Portfolio section that renders project cards from `src/data/data.json`.
+- Resume section (`src/components/main/resume/`).
+- Contact form that calls `emailjs.sendForm` with a service and template ID (`contact/Contact.js`).
 
-- Node.js (v16 or v18 recommended)
-- Package manager (`pnpm` or `npm`)
+## How it's built
 
-## Getting Started
+- React 18 with React Router DOM v6 and SCSS for styling, with one `.scss` file next to each component.
+- Components live under `src/components/main/`, one folder per section, and `Main.js` composes them.
+- Content is kept in `src/data/data.json`, so the portfolio cards are driven by data rather than markup.
+- The contact form sends from the browser with `emailjs-com`, so no server is needed.
+- Create React App (`react-scripts` 5) handles the build, and Firebase Hosting is configured with `firebase.json`.
 
-1. **Install dependencies**:
-   ```bash
-   pnpm install
-   # or
-   npm install
-   ```
+## Running it locally
 
-2. **Run the Development Server**:
-   ```bash
-   pnpm start
-   # or
-   npm start
-   ```
+```bash
+pnpm install   # or npm install
+pnpm start     # or npm start, then open http://localhost:3000
+```
 
-3. **Access the Portfolio**:
-   Open `http://localhost:3000` in your web browser.
+Other scripts: `npm run build` (production bundle), `npm test` (react-scripts test runner), `npm run format` (Prettier).
 
-## Available Scripts
+## What's left
 
-- `npm start` - Starts the development server with live reload.
-- `npm run build` - Bundles the app for production.
-- `npm test` - Launches the test runner.
-- `npm run format` - Formats the codebase using Prettier.
-
-## Author
-
-Created by [Mehfooz-ur-Rehman](https://github.com/MehfoozurRehman).
+- No test files exist even though the test script is configured.
+- Project and service content is hard-coded in the JSON and components, with no CMS or admin.
+- The EmailJS IDs are written in `Contact.js` rather than read from configuration.
+- No live URL is recorded in the repo.
+- No deploy script is defined in `package.json`; Firebase deployment has to be run by hand with `firebase deploy`.
